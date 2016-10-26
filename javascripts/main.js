@@ -30,24 +30,24 @@ let imageList = (searchText) => {
 
 
 $(document).ready(function() {
-  $("#clicky-button").on("click", () => {
-    $("#clicky-button").button("loading");
-    $("#output").html("");
-    let searchy =$("#imgur-search").val();
-    console.log("it's working", searchy);
+  $('#clicky-button').on('click', ()=> {
+    $('#clicky-button').button('loading');
+    $('#output').html("");
+    let searchy = $('#imgur-search').val();
+    console.log('its working', searchy);
     imageList(searchy).then((dataFromImgur)=>{
-      $("#clicky-button").button("reset");
+      $('#clicky-button').button('reset');
       console.log('dataFromImgur', dataFromImgur);
       dataFromImgur.forEach((image)=>{
-        console.log("image", image.link);
-        $("#output").append(`<img src="${image.link}">`);
+        $('#output').append(`<img src="${image.link}">`);
       }).catch((error) => {
-        $("#clicky-button").button("reset");
+        $('#clicky-button').button('reset');
       });
+
     });
   });
-});
 
+});
 
 
 

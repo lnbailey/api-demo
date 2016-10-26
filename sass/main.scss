@@ -1,13 +1,29 @@
 body {
 	h1 {
-		color: green;
+		color: #337ab7;
 		text-align: center;
 	}
 }
 
+input {
+	padding: 14px;
+	border: 0px;
+	border-radius: 6px;
+	&:focus {
+	background: whitesmoke;
+	outline: none;
+		}
+}
+
 .search-bar {
 	width: 50%;
-	background: gray;
+	background: #ddd;
+	padding: 20px;
+
+}
+
+.panel-body {
+	text-align: center;
 }
 
 #output {
